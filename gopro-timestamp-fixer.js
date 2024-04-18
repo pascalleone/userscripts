@@ -4,7 +4,7 @@
 // @description  Please fix your firmware, GoPro
 // @namespace    https://github.com/pascalleone
 // @homepage     https://github.com/pascalleone/userscripts
-// @version      0.1.4
+// @version      0.1.5
 // @author       Pascal Leone
 //
 // @match        https://plus.gopro.com/media-library
@@ -39,12 +39,14 @@
         if (!match) continue;
 
         accessToken = match[1];
+
+        break;
     }
 
     if (!accessToken) {
         return GM.notification({
             title: 'Error',
-            text: `Could not find access token`,
+            text: 'Could not find access token',
             silent: true
         });
     }
@@ -71,7 +73,7 @@
     if (!selectedMediaEls.length) {
         return GM.notification({
             title: 'Error',
-            text: `No medias were selected`,
+            text: 'No medias were selected',
             silent: true
         });
     }
@@ -93,7 +95,15 @@
         const gridItemEl = selectedEl.closest('.grid-item');
         const id = gridItemEl.querySelector('.grid-item-wrapper').id;
         const filename = gridItemEl.querySelector('.filename-overlay').innerText;
-        const duration = gridItemEl.querySelector('.media-details .duration').innerText;
+        const duration = gridItemEl.querySelector('.media-details .duration')?.innerText;
+
+        if (!duration) {
+            return GM.notification({
+                title: 'Error',
+                text: `No medias were selected`,
+                silent: true
+            });
+        }
 
         // filename example: GX020005.MP4
         let [, chunk, recording] = filename.match(/GX(\d{2})(\d+)\.MP4/);
