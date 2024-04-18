@@ -9,8 +9,8 @@
 //
 // @match        https://yagpdb.xyz/*
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=yagpdb.xyz
-// @updateURL    https://raw.githubusercontent.com/pascalleone/userscripts/main/cc-editor.js
-// @downloadURL  https://raw.githubusercontent.com/pascalleone/userscripts/main/cc-editor.js
+// @updateURL    https://raw.githubusercontent.com/pascalleone/userscripts/main/cc-editor.user.js
+// @downloadURL  https://raw.githubusercontent.com/pascalleone/userscripts/main/cc-editor.user.js
 //
 // @grant        GM.addStyle
 // @grant        window.onurlchange

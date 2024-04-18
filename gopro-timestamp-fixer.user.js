@@ -10,8 +10,8 @@
 // @match        https://plus.gopro.com/media-library
 // @match        https://plus.gopro.com/media-library/
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=plus.gopro.com
-// @updateURL    https://raw.githubusercontent.com/pascalleone/userscripts/main/gopro-timestamp-fixer.js
-// @downloadURL  https://raw.githubusercontent.com/pascalleone/userscripts/main/gopro-timestamp-fixer.js
+// @updateURL    https://raw.githubusercontent.com/pascalleone/userscripts/main/gopro-timestamp-fixer.user.js
+// @downloadURL  https://raw.githubusercontent.com/pascalleone/userscripts/main/gopro-timestamp-fixer.user.js
 //
 // @require      https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js
 // @require      https://cdn.jsdelivr.net/npm/dayjs@1/plugin/utc.js
@@ -100,7 +100,7 @@
         if (!duration) {
             return GM.notification({
                 title: 'Error',
-                text: `No medias were selected`,
+                text: 'Window is too small, could not find media duration',
                 silent: true
             });
         }
@@ -115,7 +115,7 @@
         if (prevRecording && prevRecording !== recording) {
             return GM.notification({
                 title: 'Error',
-                text: `Multiple recordings were selected`,
+                text: 'Multiple recordings were selected',
                 silent: true
             });
         }

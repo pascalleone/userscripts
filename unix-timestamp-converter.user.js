@@ -9,8 +9,8 @@
 //
 // @match        *://*/*
 // @icon
-// @updateURL    https://raw.githubusercontent.com/pascalleone/userscripts/main/unix-timestamp-converter.js
-// @downloadURL  https://raw.githubusercontent.com/pascalleone/userscripts/main/unix-timestamp-converter.js
+// @updateURL    https://raw.githubusercontent.com/pascalleone/userscripts/main/unix-timestamp-converter.user.js
+// @downloadURL  https://raw.githubusercontent.com/pascalleone/userscripts/main/unix-timestamp-converter.user.js
 //
 // @require      https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js
 // @require      https://cdn.jsdelivr.net/npm/dayjs@1/plugin/relativeTime.js
