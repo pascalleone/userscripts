@@ -10,8 +10,8 @@
 // @match        https://plus.gopro.com/media-library
 // @match        https://plus.gopro.com/media-library/
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=plus.gopro.com
-// @updateURL    https://github.com/pascalleone/userscripts/src/gopro-timestamp-fixer.js
-// @downloadURL  https://github.com/pascalleone/userscripts/src/gopro-timestamp-fixer.js
+// @updateURL    https://raw.githubusercontent.com/pascalleone/userscripts/main/gopro-timestamp-fixer.js
+// @downloadURL  https://raw.githubusercontent.com/pascalleone/userscripts/main/gopro-timestamp-fixer.js
 //
 // @require      https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js
 // @require      https://cdn.jsdelivr.net/npm/dayjs@1/plugin/utc.js
