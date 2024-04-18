@@ -4,7 +4,7 @@
 // @description
 // @namespace    https://github.com/pascalleone
 // @homepage     https://github.com/pascalleone/userscripts
-// @version      0.1.18
+// @version      0.1.19
 // @author       Pascal Leone
 //
 // @match        *://*/*
@@ -24,6 +24,7 @@
 
 (async () => {
     'use strict';
+
     const dayjs = window.dayjs || null;
 
     if (!dayjs) {
@@ -60,7 +61,7 @@
         const notificationContent =
             `${date.format('YYYY-MM-DD HH:mm:ss Z')}\n`
             + `${date.fromNow()}\n\n`
-            + `Click to copy to clipboard`;
+            + 'Click to copy to clipboard';
 
         return GM.notification({
             title: `UNIX Timestamp Converter - ${timestamp}`,
@@ -82,6 +83,11 @@
     }
 })();
 
+/**
+ * get the text content of a selection
+ *
+ * @returns {string}
+ */
 function getSelectionText() {
     let text = '';
     let activeEl = document.activeElement;

@@ -4,7 +4,7 @@
 // @description
 // @namespace    https://github.com/pascalleone
 // @homepage     https://github.com/pascalleone/userscripts
-// @version      0.2.20
+// @version      0.2.21
 // @author       Pascal Leone
 //
 // @match        https://yagpdb.xyz/*
@@ -35,7 +35,7 @@
     }
 
     /**
-     * adds event listeners to all textareas
+     * add event listeners to all textareas
      */
     function initialize() {
         const elements = document.querySelectorAll('textarea');
@@ -51,7 +51,7 @@
     }
 
     /**
-     * resizes a textarea to fit all of its contents
+     * resize a textarea to fit all of its contents
      *
      * @param {HTMLTextAreaElement} el
      */
@@ -65,7 +65,7 @@
     }
 
     /**
-     * executes a callback once element becomes visible (by scrolling into view, loading a page, etc.)
+     * execute a callback once element becomes visible (by scrolling into view, loading a page, etc.)
      *
      * @param {HTMLElement} element
      * @param {function} callback
@@ -87,9 +87,11 @@
     }
 
     /**
+     * log a message
+     *
      * @param {string} msg
      */
     function log(msg) {
-        console.log(`cc-editor.js: ${msg.trim()}`);
+        console.log(`cc-editor.user.js: ${msg.trim()}`);
     }
 })();

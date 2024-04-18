@@ -4,7 +4,7 @@
 // @description  Please fix your firmware, GoPro
 // @namespace    https://github.com/pascalleone
 // @homepage     https://github.com/pascalleone/userscripts
-// @version      0.1.5
+// @version      0.1.6
 // @author       Pascal Leone
 //
 // @match        https://plus.gopro.com/media-library
@@ -163,10 +163,12 @@
     }
 
     /**
-     * updates a medias "captured_at" value by making a request to the gopro api
+     * update a medias "captured_at" value by making a request to the gopro api
      *
      * @param {string} id
      * @param {string} capturedAt
+     *
+     * @returns {Promise<any>}
      */
     async function updateMedia(id, capturedAt) {
         const response = await fetch(`https://api.gopro.com/media/${id}`, {
@@ -191,15 +193,22 @@
     }
 
     /**
+     * wait a specified amount of time
+     *
      * @param {number} ms
+     *
+     * @returns {Promise<any>}
      */
     function sleep(ms) {
         return new Promise(resolve => setTimeout(resolve, ms));
     }
 
     /**
+     * generate a random number between min and max
+     *
      * @param {number} min
      * @param {number} max
+     *
      * @returns {number}
      */
     function random(min, max) {
@@ -207,9 +216,13 @@
     }
 
     /**
+     * log a message
+     *
      * @param {string} msg
+     *
+     * @returns {void}
      */
     function log(msg) {
-        console.log(`gopro-timestamp-fixer.js: ${msg.trim()}`);
+        console.log(`gopro-timestamp-fixer.user.js: ${msg.trim()}`);
     }
 })();
